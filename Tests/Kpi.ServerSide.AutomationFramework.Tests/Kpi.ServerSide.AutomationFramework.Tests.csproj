@@ -1,0 +1,208 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <OutputType>Library</OutputType>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1701,1702,SA0001,AD0001,1573,1591,1712;8034</NoWarn>
+    <CodeAnalysisRuleSet>..\..\StyleCop\FxCop.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;Core</DefineConstants>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>1701,1702,SA0001,AD0001,1573,1591,1712;8034</NoWarn>
+    <CodeAnalysisRuleSet>..\..\StyleCop\FxCop.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\StyleCop\GlobalSuppressions.cs" Link="GlobalSuppressions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\StyleCop\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.0.0" />
+    <PackageReference Include="Autofac.Configuration" Version="6.0.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.0.1" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.8" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="SpecFlow" Version="3.4.8" />
+    <PackageReference Include="SpecFlow.Autofac" Version="3.4.8" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.4.8" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.4.8" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.console" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="XunitXml.TestLogger" Version="2.1.26" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kpi.ServerSide.AutomationFramework.Bootstrap\Kpi.ServerSide.AutomationFramework.Bootstrap.csproj" />
+    <ProjectReference Include="..\Kpi.ServerSide.AutomationFramework.TestsData\Kpi.ServerSide.AutomationFramework.TestsData.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="env.stg.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="env.int.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="specflow.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="xunit.runner.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\GetAbTesting.Definition.cs">
+      <DependentUpon>Ab Testing.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAggregatedInfoUserSettings.Definition.cs">
+      <DependentUpon>Aggregated Info User Settings.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAppropriateness.Definition.cs">
+      <DependentUpon>Appropriateness.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAsicSuitabilityTest.Definition.cs">
+      <DependentUpon>ASIC Suitability Test Should Pass.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetCheckTnc.Definition.cs">
+      <DependentUpon>Check Tnc.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetComplianceRequirements.Definition.cs">
+      <DependentUpon>Compliance Requirements.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetContactInfo.Definition.cs">
+      <DependentUpon>Contact Info.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetCustomerRestriction.Definition.cs">
+      <DependentUpon>Customer Restriction.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetDepositInfobyGcid.Definition.cs">
+      <DependentUpon>Deposit Info by Gcid.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetElectiveProfessionalQuestionnaire.Definition.cs">
+      <DependentUpon>Elective Professional Questionnaire Start.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetIsAbleToCopy.Definition.cs">
+      <DependentUpon>Is Able To Copy.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetPotentialLeverageFlowForRealStocks.Definition.cs">
+      <DependentUpon>Potential Leverage Flow for Real Stocks.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetW8ben.Definition.cs">
+      <DependentUpon>W8ben.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\PatchW8benState.Definition.cs">
+      <DependentUpon>W8ben State.Patch.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetVerificationStatusAndDocuments.Definition.cs">
+      <DependentUpon>Verification Status And Documents.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetUserTaxes.Definition.cs">
+      <DependentUpon>User Taxes.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetKycAggregatedInfo.Definition.cs">
+      <DependentUpon>Kyc Aggregated Info.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetRequiredEvFields.Definition.cs">
+      <DependentUpon>Required Ev Fields.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetTradeRestriction.Definition.cs">
+      <DependentUpon>Trade Restriction.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetUserResources.Definition.cs">
+      <DependentUpon>User Resources.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetStateNavigation.Definition.cs">
+      <DependentUpon>State Navigation.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetUserTnc.Definition.cs">
+      <DependentUpon>User Tnc.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetVerificationCompletionPercentage.Definition.cs">
+      <DependentUpon>Verification Completion Percentage.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetPotentialLeverageFlow.Definition.cs">
+      <DependentUpon>Potential Leverage Flow.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetTncDocuments.Definition.cs">
+      <DependentUpon>Tnc Documents.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetUserRiskInfo.Definition.cs">
+      <DependentUpon>User Risk Info.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\PutUserSignature.Definition.cs">
+      <DependentUpon>User Signature.Put.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\PostElectiveProfessionalQuestionnaireEnd.Definition.cs">
+      <DependentUpon>Elective Professional Questionnaire End.Post.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAccountStatementUser.Definition.cs">
+      <DependentUpon>Account Statement User.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetRegulationSettings.Definition.cs">
+      <DependentUpon>Regulation Settings.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetStatementSummaryFromAccountStattement.Definition.cs">
+      <DependentUpon>Statement Summary.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAccountStatementDocuments.Definition.cs">
+      <DependentUpon>Account Statement Documents.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetShouldPassCopySuitability.Definition.cs">
+      <DependentUpon>Should Pass Copy Suitability.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetCountries.Definition.cs">
+      <DependentUpon>Countries.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAccountStatementClosedPositions.Definition.cs">
+      <DependentUpon>Account Statement Closed Positions.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAccountStatementTransactions.Definition.cs">
+      <DependentUpon>Account Statement Transactions.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAccountStatementTaxSummary.Definition.cs">
+      <DependentUpon>Account Statement Tax Summary.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetExtendedUserFieldsMetadata.Definition.cs">
+      <DependentUpon>Extended User Fields Metadata.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetKycFlow.Definition.cs">
+      <DependentUpon>Kyc Flow.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetAggregatedInfo.Definition.cs">
+      <DependentUpon>Aggregated Info.Get.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\GetComplianceUserDocuments.Definition.cs">
+      <DependentUpon>Compliance User Documents.Get.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

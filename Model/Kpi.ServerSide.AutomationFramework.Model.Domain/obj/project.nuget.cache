@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "z3FrepvGhAHUKTjuP7Gw02iTVCxPs3PlKKOXu12omXKIM3oE3mlzXpIJZo7QW6vhxH+gIKMMrLb7vdg0ZLlRGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bigbo\\Desktop\\TAF\\Model\\Kpi.ServerSide.AutomationFramework.Model.Domain\\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bigbo\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
+  "logs": []
+}
