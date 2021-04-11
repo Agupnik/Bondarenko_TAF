@@ -2499,6 +2499,30 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
+      "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Kpi.ServerSide.AutomationFramework.Model.Domain": "1.0.0",
+          "Kpi.ServerSide.AutomationFramework.Platform": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.dll": {}
+        }
+      },
+      "Kpi.ServerSide.AutomationFramework.Model.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Kpi.ServerSide.AutomationFramework.Model.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kpi.ServerSide.AutomationFramework.Model.Domain.dll": {}
+        }
+      },
       "Kpi.ServerSide.AutomationFramework.Model.Platform/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -8093,6 +8117,16 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
+    "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/Kpi.ServerSide.AutomationFramework.YourDomain/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
+      "msbuildProject": "../../Domain/Kpi.ServerSide.AutomationFramework.YourDomain/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj"
+    },
+    "Kpi.ServerSide.AutomationFramework.Model.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Model/Kpi.ServerSide.AutomationFramework.Model.Domain/Kpi.ServerSide.AutomationFramework.Model.Domain.csproj",
+      "msbuildProject": "../../Model/Kpi.ServerSide.AutomationFramework.Model.Domain/Kpi.ServerSide.AutomationFramework.Model.Domain.csproj"
+    },
     "Kpi.ServerSide.AutomationFramework.Model.Platform/1.0.0": {
       "type": "project",
       "path": "../../Model/Kpi.ServerSide.AutomationFramework.Model.Platform/Kpi.ServerSide.AutomationFramework.Model.Platform.csproj",
@@ -8107,7 +8141,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Autofac >= 6.0.0",
-      "Kpi.ServerSide.AutomationFramework.Platform >= 1.0.0",
+      "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 3.1.8",
       "Microsoft.Extensions.Configuration.Abstractions >= 3.1.8",
       "Microsoft.Extensions.Configuration.Binder >= 3.1.8",
@@ -8148,8 +8182,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj": {
-              "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj"
+            "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {
+              "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj"
             }
           }
         }

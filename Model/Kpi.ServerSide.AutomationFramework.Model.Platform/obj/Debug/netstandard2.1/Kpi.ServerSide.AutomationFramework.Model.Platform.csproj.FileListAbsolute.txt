@@ -1,0 +1,9 @@
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\bin\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.deps.json
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\bin\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.dll
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\bin\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.pdb
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.AssemblyInfoInputs.cache
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.AssemblyInfo.cs
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.csproj.CoreCompileInputs.cache
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.dll
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.pdb
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Platform\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Platform.csprojAssemblyReference.cache

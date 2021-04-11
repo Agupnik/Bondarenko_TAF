@@ -42,7 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Platform\Kpi.ServerSide.AutomationFramework.Platform\Kpi.ServerSide.AutomationFramework.Platform.csproj" />
+    <ProjectReference Include="..\..\Domain\Kpi.ServerSide.AutomationFramework.YourDomain\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj" />
   </ItemGroup>
 
 </Project>

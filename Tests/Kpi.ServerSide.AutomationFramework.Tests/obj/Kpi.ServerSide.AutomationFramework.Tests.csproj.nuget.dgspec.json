@@ -4,6 +4,77 @@
     "C:\\Users\\bigbo\\Desktop\\TAF\\Tests\\Kpi.ServerSide.AutomationFramework.Tests\\Kpi.ServerSide.AutomationFramework.Tests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
+        "projectName": "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com",
+        "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
+        "packagesPath": "C:\\Users\\bigbo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bigbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\bigbo\\Desktop\\TAF\\Model\\Kpi.ServerSide.AutomationFramework.Model.Domain\\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj": {
+                "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Model\\Kpi.ServerSide.AutomationFramework.Model.Domain\\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj"
+              },
+              "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj": {
+                "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\bigbo\\Desktop\\TAF\\Model\\Kpi.ServerSide.AutomationFramework.Model.Domain\\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -283,8 +354,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj": {
-                "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj"
+              "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {
+                "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj"
               }
             }
           }
