@@ -8119,8 +8119,8 @@
     },
     "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com/1.0.0": {
       "type": "project",
-      "path": "../../Domain/Kpi.ServerSide.AutomationFramework.YourDomain/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
-      "msbuildProject": "../../Domain/Kpi.ServerSide.AutomationFramework.YourDomain/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj"
+      "path": "../../Domain/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
+      "msbuildProject": "../../Domain/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com/Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj"
     },
     "Kpi.ServerSide.AutomationFramework.Model.Domain/1.0.0": {
       "type": "project",
@@ -8141,6 +8141,8 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "Autofac >= 6.0.0",
+      "Kpi.ServerSide.AutomationFramework.Model.Domain >= 1.0.0",
+      "Kpi.ServerSide.AutomationFramework.Platform >= 1.0.0",
       "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 3.1.8",
       "Microsoft.Extensions.Configuration.Abstractions >= 3.1.8",
@@ -8182,8 +8184,14 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {
-              "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj"
+            "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {
+              "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj"
+            },
+            "C:\\Users\\bigbo\\Desktop\\TAF\\Model\\Kpi.ServerSide.AutomationFramework.Model.Domain\\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj": {
+              "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Model\\Kpi.ServerSide.AutomationFramework.Model.Domain\\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj"
+            },
+            "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj": {
+              "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Platform\\Kpi.ServerSide.AutomationFramework.Platform\\Kpi.ServerSide.AutomationFramework.Platform.csproj"
             }
           }
         }

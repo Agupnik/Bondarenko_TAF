@@ -53,7 +53,6 @@ namespace Kpi.ServerSide.AutomationFramework.Platform.Client
             return await _client.ExecuteAsync(request);
         }
 
-         // added
         protected async Task<IRestResponse> ExecuteGetAsync(string uri)
         {
             var request = new RestRequest(uri, Method.GET);

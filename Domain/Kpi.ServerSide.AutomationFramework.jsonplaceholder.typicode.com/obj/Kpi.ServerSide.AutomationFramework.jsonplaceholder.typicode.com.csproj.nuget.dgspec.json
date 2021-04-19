@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {}
+    "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {
+    "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
+        "projectUniqueName": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
         "projectName": "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com",
-        "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
+        "projectPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj",
         "packagesPath": "C:\\Users\\bigbo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.YourDomain\\obj\\",
+        "outputPath": "C:\\Users\\bigbo\\Desktop\\TAF\\Domain\\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
