@@ -6,3 +6,4 @@ C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Domain
 C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Domain\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj.CoreCompileInputs.cache
 C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Domain\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Domain.dll
 C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Domain\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Domain.pdb
+C:\Users\bigbo\Desktop\TAF\Model\Kpi.ServerSide.AutomationFramework.Model.Domain\obj\Debug\netstandard2.1\Kpi.ServerSide.AutomationFramework.Model.Domain.csprojAssemblyReference.cache

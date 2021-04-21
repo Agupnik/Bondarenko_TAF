@@ -1,32 +1,19 @@
 # Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+/.vs/*
+/.idea/*
+*/bin/*
+*/obj/*
+*.DotSettings
+*/*.feature.cs
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+/TestResults/*.html
+/*/*/bin/*
+/*/*/obj
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+*.feature.cs
+*.csproj.user
+*.sln.DotSettings.user
+/*/*/TestResults/*
+*.txt
