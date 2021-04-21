@@ -1,16 +1,14 @@
 ﻿# Prerequisites
+*.d
 
 /.vs/*
+/*/*/bin/**
+/*/*/obj/*
 *.DotSettings
-*/*.feature.cs
+*.feature.cs
 
-
+/*.user
 /TestResults/*.html
-/*/*/bin/*
 /*/*/obj/*
 
-*.feature.cs
-*.csproj.user
-*.sln.DotSettings.user
-/*/*/TestResults/*
-*.txt
+*.user
