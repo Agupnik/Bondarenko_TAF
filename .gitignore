@@ -1,16 +1,13 @@
-# Prerequisites
+﻿# Prerequisites
 
 /.vs/*
-/.idea/*
-*/bin/*
-*/obj/*
 *.DotSettings
 */*.feature.cs
 
 
 /TestResults/*.html
 /*/*/bin/*
-/*/*/obj
+/*/*/obj/*
 
 *.feature.cs
 *.csproj.user
