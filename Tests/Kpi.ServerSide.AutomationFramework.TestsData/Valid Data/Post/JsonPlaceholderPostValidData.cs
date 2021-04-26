@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Kpi.ServerSide.AutomationFramework.TestsData.Valid_Data.Post
 {
-    public static class PostCreateValidData
+    public static class JsonPlaceholderPostValidData
     {
         public static string ValidTitle = "Hello!";
 

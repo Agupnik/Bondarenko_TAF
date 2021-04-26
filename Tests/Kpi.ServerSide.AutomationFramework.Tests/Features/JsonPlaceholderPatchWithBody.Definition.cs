@@ -4,22 +4,22 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Kpi.ServerSide.AutomationFramework.Model.Domain;
-using Kpi.ServerSide.AutomationFramework.Model.Domain.Post;
+using Kpi.ServerSide.AutomationFramework.Model.Domain.JsonPlaceholder;
 using Kpi.ServerSide.AutomationFramework.TestsData.Storages.Post;
 using Kpi.ServerSide.AutomationFramework.TestsData.Valid_Data.Post;
 using TechTalk.SpecFlow;
 
 namespace Kpi.ServerSide.AutomationFramework.Tests.Features
 {
-    [Binding, Scope(Feature = "Patch Post with provided body")]
+    [Binding, Scope(Feature = "Patch JsonPlaceholder with provided body")]
     public class PostPatchWithBody
     {
-        private readonly IPostContext _postContext;
-        private PostResponse _postResponse;
+        private readonly IJsonPlaceholderContext _postContext;
+        private JsonPlaceholderResponse _postResponse;
         private ResponseMessage _responseMessage;
 
         public PostPatchWithBody(
-            IPostContext postContext)
+            IJsonPlaceholderContext postContext)
         {
             _postContext = postContext;
         }
@@ -27,32 +27,31 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
         [Given(@"I have free API")]
         public void GivenIHaveFreeApi()
         {
-            // Not supported because unneeded
         }
 
         [When(@"I send patch request to update body field")]
         public async Task WhenSendingPatchRequestWithValidBody()
         {
-            _postResponse = await _postContext.PatchPostBodyAsync(
-                PostPatchStorage.PostPatchBodies["Default"], PostGetValidData.ValidPostId);
+            _postResponse = await _postContext.PatchJsonPlaceholderBodyAsync(
+                JsonPlaceholderPatchStorage.JsonPlaceholderPatchBodies["Default"], JsonPlaceholderGetValidData.ValidPostId);
         }
 
-        [When(@"I send Patch request with (.*) invalid post id")]
-        public async Task WhenPatchPostWithInvalidPostId(
+        [When(@"I send Patch request with (.*) invalid JsonPlaceholder id")]
+        public async Task WhenPatchPostWithInvalidJsonPlaceholderId(
             int value)
         {
-            _responseMessage = await _postContext.PatchPostResponseAsync(
-                PostPatchStorage.PostPatchBodies["Default"].Body,
+            _responseMessage = await _postContext.PatchJsonPlaceholderResponseAsync(
+                JsonPlaceholderPatchStorage.JsonPlaceholderPatchBodies["Default"].Body,
                 value);
         }
 
-        [When(@"I send put request with (.*) invalid post body")]
-        public async Task WhenPatchPostWithInvalidBody(
+        [When(@"I send Patch request with (.*) invalid JsonPlaceholder body")]
+        public async Task WhenPatchJsonPlaceholderWithInvalidBody(
             string value)
         {
-            _responseMessage = await _postContext.PatchPostResponseAsync(
+            _responseMessage = await _postContext.PatchJsonPlaceholderResponseAsync(
                 value,
-                PostGetValidData.ValidPostId);
+                JsonPlaceholderGetValidData.ValidPostId);
         }
 
         [Then(@"I see (.*) response status code")]
@@ -71,10 +70,10 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
                 expectedErrorResponse);
         }
 
-        [Then(@"I see returned patched post details")]
-        public void ThenISeeReturnedPatchedPostDetails()
+        [Then(@"I see returned patched JsonPlaceholder details")]
+        public void ThenISeeReturnedPatchedJsonPlaceholderDetails()
         {
-            var expectedResponse = PostPatchStorage.PostPatchBodies["Default"];
+            var expectedResponse = JsonPlaceholderPatchStorage.JsonPlaceholderPatchBodies["Default"];
             _postResponse.Should().BeEquivalentTo(
                 expectedResponse,
                 options =>

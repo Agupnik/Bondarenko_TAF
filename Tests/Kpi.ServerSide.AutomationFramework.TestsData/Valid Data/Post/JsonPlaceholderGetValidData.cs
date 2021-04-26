@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Kpi.ServerSide.AutomationFramework.TestsData.Valid_Data.Post
 {
-    public static class PostGetValidData
+    public static class JsonPlaceholderGetValidData
     {
         public static int ValidPostId = 1;
     }

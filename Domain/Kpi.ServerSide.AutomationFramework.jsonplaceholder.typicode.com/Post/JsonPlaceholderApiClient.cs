@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Reflection;
 using System.Threading.Tasks;
 using Kpi.ServerSide.AutomationFramework.Model.Domain;
-using Kpi.ServerSide.AutomationFramework.Model.Domain.Post;
+using Kpi.ServerSide.AutomationFramework.Model.Domain.JsonPlaceholder;
 using Kpi.ServerSide.AutomationFramework.Model.Platform.Communication;
 using Kpi.ServerSide.AutomationFramework.Platform.Client;
 using Kpi.ServerSide.AutomationFramework.Platform.Communication.Http;
 using Kpi.ServerSide.AutomationFramework.Platform.Configuration.Environment;
-using RestSharp;
 using Serilog;
 
-namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
+namespace Kpi.ServerSide.AutomationFramework.JsonPlaceholder.Post
 {
-    public class PostApiClient : ApiClientBase, IPostApiClient
+    public class JsonPlaceholderApiClient : ApiClientBase, IJsonPlaceholderApiClient
     {
-        public PostApiClient(
+        public JsonPlaceholderApiClient(
             IClient client, 
             ILogger logger, 
             IEnvironmentConfiguration environmentConfiguration) 
@@ -25,7 +21,7 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
             client.SetBaseUri(environmentConfiguration.EnvironmentUri);
         }
 
-        public async Task<PostResponse> GetPostByIdAsync(int postId)
+        public async Task<JsonPlaceholderResponse> GetJsonPlaceholderByIdAsync(int postId)
         {
             Logger.Information(
                 "Start '{@Method}' with '{@postId}'",
@@ -40,11 +36,11 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
                 restResponse);
 
-            var model = restResponse.GetModel<PostResponse>();
+            var model = restResponse.GetModel<JsonPlaceholderResponse>();
             return model;
         }
 
-        public async Task<ResponseMessage> GetPostByIdResponseAsync(string postId)
+        public async Task<ResponseMessage> GetJsonPlaceholderByIdResponseAsync(string postId)
         {
             Logger.Information(
                 "Start '{@Method}' with '{@postId}'",
@@ -66,8 +62,8 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
             return responseModel;
         }
 
-        public async Task<PostResponse> CreatePostAsync(
-            PostCreate postCreate)
+        public async Task<JsonPlaceholderResponse> CreateJsonPlaceholderAsync(
+            JsonPlaceholderPost postCreate)
         {
             Logger.Information(
                 "Start '{@Method}' with '{@postCreate}'",
@@ -83,10 +79,10 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
                 restResponse);
 
-            return restResponse.GetModel<PostResponse>();
+            return restResponse.GetModel<JsonPlaceholderResponse>();
         }
 
-        public async Task<ResponseMessage> CreatePostResponseAsync(
+        public async Task<ResponseMessage> CreateJsonPlaceholderResponseAsync(
             int userid, string title, string body)
         {
             Logger.Information(
@@ -98,7 +94,7 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
 
             var restResponse = await ExecutePostAsync(
                 $"/posts",
-                new PostCreate
+                new JsonPlaceholderPost
                 {
                     Body = body,
                     Title = title,
@@ -121,8 +117,8 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
             return responseModel;
         }
 
-        public async Task<PostResponse> PutPostAsync(
-            PostResponse postResponse, int postId)
+        public async Task<JsonPlaceholderResponse> PutJsonPlaceholderAsync(
+            JsonPlaceholderResponse postResponse, int postId)
         {
             Logger.Information(
                 "Start '{@Method}' with '{@postResponse}'",
@@ -138,10 +134,10 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
                 restResponse);
 
-            return restResponse.GetModel<PostResponse>();
+            return restResponse.GetModel<JsonPlaceholderResponse>();
         }
 
-        public async Task<ResponseMessage> PutPostResponseAsync(
+        public async Task<ResponseMessage> PutJsonPlaceholderResponseAsync(
             int userid, string title, string body, int postId)
         {
             Logger.Information(
@@ -154,7 +150,7 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
 
             var restResponse = await ExecutePutAsync(
                 $"/posts/{postId}",
-                new PostResponse
+                new JsonPlaceholderResponse
                 {
                     Id = postId,
                     Body = body,
@@ -179,8 +175,8 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
             return responseModel;
         }
 
-        public async Task<PostResponse> PatchPostBodyAsync(
-            PostPatch postPatch, int postId)
+        public async Task<JsonPlaceholderResponse> PatchJsonPlaceholderBodyAsync(
+            JsonPlaceholderPatch postPatch, int postId)
         {
             Logger.Information(
                 "Start '{@Method}' with '{@postPatch}' object which contains changed body value and '{@postId}' as post id",
@@ -197,10 +193,10 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
                 MethodBase.GetCurrentMethod().DeclaringType?.FullName,
                 restResponse);
 
-            return restResponse.GetModel<PostResponse>();
+            return restResponse.GetModel<JsonPlaceholderResponse>();
         }
 
-        public async Task<ResponseMessage> PatchPostResponseAsync(
+        public async Task<ResponseMessage> PatchJsonPlaceholderResponseAsync(
             string body, int postId)
         {
             Logger.Information(
@@ -211,7 +207,7 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
 
             var restResponse = await ExecutePatchAsync(
                 $"/posts/{postId}",
-                new PostPatch
+                new JsonPlaceholderPatch
                 {
                     Body = body,
                 });
@@ -231,7 +227,7 @@ namespace Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post
             return responseModel;
         }
 
-        public async Task<ResponseMessage> DeletePostResponseAsync(string postId)
+        public async Task<ResponseMessage> DeleteJsonPlaceholderResponseAsync(string postId)
         {
             Logger.Information(
                 "Start '{@Method}' with '{@postId}'",

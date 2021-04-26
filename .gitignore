@@ -6,6 +6,7 @@
 /*/*/obj/*
 *.DotSettings
 *.feature.cs
+*.AssemblyInfo.cs
 
 /*.user
 /TestResults/*.html

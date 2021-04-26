@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kpi.ServerSide.AutomationFr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kpi.ServerSide.AutomationFramework.TestsData", "Tests\Kpi.ServerSide.AutomationFramework.TestsData\Kpi.ServerSide.AutomationFramework.TestsData.csproj", "{E9FA6374-EB01-459C-B209-DB063D8E2335}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com", "Domain\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.csproj", "{C40DF487-49EF-4D1C-AD21-C3604BD8849A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kpi.ServerSide.AutomationFramework.JsonPlaceholder", "Domain\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\Kpi.ServerSide.AutomationFramework.JsonPlaceholder.csproj", "{C40DF487-49EF-4D1C-AD21-C3604BD8849A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

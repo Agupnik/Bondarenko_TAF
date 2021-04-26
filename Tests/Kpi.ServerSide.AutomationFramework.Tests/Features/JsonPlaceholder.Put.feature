@@ -1,15 +1,15 @@
 ﻿@Put
 @Regression
-Feature: Put Post with provided body
+Feature: Put JsonPlaceholder with provided body
 	Strory:
 
 @Smoke
-Scenario: 1. Put post with passed valid body
+Scenario: 1. Put JsonPlaceholder with passed valid body
 	Given I have free API
 	When I send put request with valid body
-	Then I see returned updated post details
+	Then I see returned updated JsonPlaceholder details
 
-Scenario Outline: 2. Validate Post put with invalid user id
+Scenario Outline: 2. Validate JsonPlaceholder put with invalid user id
 	Given I have free API
 	When I send put request with <WrongId> invalid user id
 	Then I see BadRequest response status code
@@ -20,9 +20,9 @@ Scenario Outline: 2. Validate Post put with invalid user id
 		| minValue | -999999 | {}            |
 		| zero     | 0       | {}            |
 
-Scenario Outline: 3. Validate Post put with invalid body
+Scenario Outline: 3. Validate JsonPlaceholder put with invalid body
 	Given I have free API
-	When I send put request with <WrongBody> invalid post body
+	When I send put request with <WrongBody> invalid JsonPlaceholder body
 	Then I see BadRequest response status code
 	And I see <ErrorResponse> response
 
@@ -30,9 +30,9 @@ Scenario Outline: 3. Validate Post put with invalid body
 		| TestId      | WrongBody | ErrorResponse |
 		| emptyString |           | {}            |
 
-Scenario Outline: 4. Validate Post put with invalid title
+Scenario Outline: 4. Validate JsonPlaceholder put with invalid title
 	Given I have free API
-	When I send put request with <WrongTitle> invalid post title
+	When I send put request with <WrongTitle> invalid JsonPlaceholder title
 	Then I see BadRequest response status code
 	And I see <ErrorResponse> response
 
@@ -40,13 +40,13 @@ Scenario Outline: 4. Validate Post put with invalid title
 		| TestId      | WrongTitle | ErrorResponse |
 		| emptyString |            | {}            |
 
-Scenario Outline: 5. Validate Post put with invalid post id
+Scenario Outline: 5. Validate JsonPlaceholder put with invalid JsonPlaceholder id
 	Given I have free API
-	When I send put request with <WrongPostId> invalid post id
+	When I send put request with <WrongJsonPlaceholderId> invalid JsonPlaceholder id
 	Then I see NotFound response status code
 	And I see <ErrorResponse> response
 
 	Examples: 
-		| TestId   | WrongPostId | ErrorResponse |
-		| minValue | -999999     | {}            |
-		| zero     | 0           | {}            |
+		| TestId   | WrongJsonPlaceholderId | ErrorResponse |
+		| minValue | -999999                | {}            |
+		| zero     | 0                      | {}            |

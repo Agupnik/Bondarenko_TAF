@@ -1,17 +1,17 @@
 ﻿@Get
 @Regression
-Feature: Get Post by Id
+Feature: Get JsonPlaceholder by Id
 	Strory:
 
 @Smoke
-Scenario: 1. Validate Get Post by id with valid data
+Scenario: 1. Validate Get JsonPlaceholder by id with valid data
 	Given I have free API
-	When I receive get post by id response
-	Then I see returned post details
+	When I receive get JsonPlaceholder by id response
+	Then I see returned JsonPlaceholder details
 
-Scenario Outline: 2. Validate Get Post by Id with invalid data
+Scenario Outline: 2. Validate Get JsonPlaceholder by Id with invalid data
 	Given I have free API
-	When I receive get post by id with <WrongId> wrong id
+	When I receive get JsonPlaceholder by id with <WrongId> wrong id
 	Then I see NotFound response status code
 	And I see <ErrorResponse> response
 

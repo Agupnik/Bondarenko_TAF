@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Kpi.ServerSide.AutomationFramework.Model.Domain.Post
+﻿namespace Kpi.ServerSide.AutomationFramework.Model.Domain.JsonPlaceholder
 {
-    public class PostResponse
+    public class JsonPlaceholderResponse
     {
         public int UserId { get; set; }
 

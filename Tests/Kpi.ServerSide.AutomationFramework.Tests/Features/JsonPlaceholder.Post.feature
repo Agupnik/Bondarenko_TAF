@@ -1,17 +1,17 @@
 ﻿@Post
 @Regression
-Feature: Create Post with provided body
+Feature: Post JsonPlaceholder with provided body
 	Strory:
 
 @Smoke
-Scenario: 1. Create new post with passed valid body
+Scenario: 1. Post new JsonPlaceholder with passed valid body
 	Given I have free API
-	When I create new post with valid data
-	Then I see returned post details
+	When I post new JsonPlaceholder with valid data
+	Then I see returned JsonPlaceholder details
 
-Scenario Outline: 2. Validate Post creation with invalid user id
+Scenario Outline: 2. Validate JsonPlaceholder post with invalid user id
 	Given I have free API
-	When I create new post with <WrongId> invalid user id
+	When I post new JsonPlaceholder with <WrongId> invalid user id
 	Then I see BadRequest response status code
 	And I see <ErrorResponse> response
 
@@ -20,9 +20,9 @@ Scenario Outline: 2. Validate Post creation with invalid user id
 		| minValue | -999999 | {}            |
 		| zero     | 0       | {}            |
 
-Scenario Outline: 3. Validate Post creation with invalid body
+Scenario Outline: 3. Validate JsonPlaceholder post with invalid body
 	Given I have free API
-	When I create new post with <WrongBody> invalid post body
+	When I post new JsonPlaceholder with <WrongBody> invalid JsonPlaceholder body
 	Then I see BadRequest response status code
 	And I see <ErrorResponse> response
 
@@ -30,9 +30,9 @@ Scenario Outline: 3. Validate Post creation with invalid body
 		| TestId      | WrongBody | ErrorResponse |
 		| emptyString |           | {}            |
 
-Scenario Outline: 4. Validate Post creation with invalid title
+Scenario Outline: 4. Validate JsonPlaceholder post with invalid title
 	Given I have free API
-	When I create new post with <WrongTitle> invalid post title
+	When I post new JsonPlaceholder with <WrongTitle> invalid JsonPlaceholder title
 	Then I see BadRequest response status code
 	And I see <ErrorResponse> response
 
