@@ -1,0 +1,26 @@
+﻿# Prerequisites
+*.d
+
+/.vs/*
+/*/*/bin/**
+/*/*/obj/*
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release
+*.DotSettings
+*.feature.cs
+/*.AssemblyInfo.cs
+/*.AssemblyAttributes.cs
+/*.cache
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+/*.user
+/TestResults/*.html
+/*/*/obj/*
+
+*.user
