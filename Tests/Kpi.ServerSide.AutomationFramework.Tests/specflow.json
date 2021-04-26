@@ -1,7 +1,0 @@
-{
-  "specflow": {
-    "unitTestProvider": {
-      "name": "xunit"
-    }
-  }
-}
