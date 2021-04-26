@@ -206,32 +206,32 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\GetPostByPostId.Definition.cs">
-      <DependentUpon>Post.Get.feature</DependentUpon>
+    <Compile Update="Features\GetJsonPlaceholderByJsonPlaceholderId.Definition.cs">
+      <DependentUpon>JsonPlaceholder.Get.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\CreatePostByPostCreate.Definition.cs">
-      <DependentUpon>Post.Create.feature</DependentUpon>
+    <Compile Update="Features\PostJsonPlaceholder.Definition.cs">
+      <DependentUpon>JsonPlaceholder.Post.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\PostPutWithBody.Definition.cs">
-      <DependentUpon>Post.Put.feature</DependentUpon>
+    <Compile Update="Features\JsonPlaceholderPutWithBody.Definition.cs">
+      <DependentUpon>JsonPlaceholder.Put.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\PostPatchWithBody.Definition.cs">
-      <DependentUpon>Post.Patch.feature</DependentUpon>
+    <Compile Update="Features\JsonPlaceholderPatchWithBody.Definition.cs">
+      <DependentUpon>JsonPlaceholder.Patch.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\DeletePostById.Definition.cs">
-      <DependentUpon>Post.Delete.feature</DependentUpon>
+    <Compile Update="Features\DeleteJsonPlaceholderById.Definition.cs">
+      <DependentUpon>JsonPlaceholder.Delete.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 

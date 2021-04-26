@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com.Post;
-using Kpi.ServerSide.AutomationFramework.Model.Domain.Post;
+using Kpi.ServerSide.AutomationFramework.JsonPlaceholder.Post;
+using Kpi.ServerSide.AutomationFramework.Model.Domain.JsonPlaceholder;
 using Kpi.ServerSide.AutomationFramework.Model.Platform.Communication;
 using Kpi.ServerSide.AutomationFramework.Platform.Communication;
 using Kpi.ServerSide.AutomationFramework.Platform.Configuration.Environment;
@@ -39,10 +39,10 @@ namespace Kpi.ServerSide.AutomationFramework.Bootstrap
             Builder.RegisterType<RestClient>().As<IRestClient>().InstancePerDependency();
 
             // Api Clients
-            Builder.RegisterType<PostApiClient>().As<IPostApiClient>().SingleInstance();
+            Builder.RegisterType<JsonPlaceholderApiClient>().As<IJsonPlaceholderApiClient>().SingleInstance();
 
             // Logic
-            Builder.RegisterType<PostContext>().As<IPostContext>().SingleInstance();
+            Builder.RegisterType<JsonPlaceholderContext>().As<IJsonPlaceholderContext>().SingleInstance();
         }
     }
 }
