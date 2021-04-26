@@ -6,7 +6,14 @@
 /*/*/obj/*
 *.DotSettings
 *.feature.cs
-*.AssemblyInfo.cs
+/*AssemblyInfo.cs
+/*AssemblyAttributes.cs
+/*.cache
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
 
 /*.user
 /TestResults/*.html
