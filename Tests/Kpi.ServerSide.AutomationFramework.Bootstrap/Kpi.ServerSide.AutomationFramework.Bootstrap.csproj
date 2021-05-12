@@ -42,8 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\Kpi.ServerSide.AutomationFramework.jsonplaceholder.typicode.com\Kpi.ServerSide.AutomationFramework.JsonPlaceholder.csproj" />
-    <ProjectReference Include="..\..\Model\Kpi.ServerSide.AutomationFramework.Model.Domain\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\Kpi.ServerSide.AutomationFramework.YourDomain\Kpi.ServerSide.AutomationFramework.YourDomain.csproj" />
     <ProjectReference Include="..\..\Platform\Kpi.ServerSide.AutomationFramework.Platform\Kpi.ServerSide.AutomationFramework.Platform.csproj" />
   </ItemGroup>
 

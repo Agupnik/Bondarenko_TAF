@@ -5,6 +5,8 @@
     <IsPackable>false</IsPackable>
     <OutputType>Library</OutputType>
     <LangVersion>8</LangVersion>
+    <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -80,159 +82,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\GetAbTesting.Definition.cs">
-      <DependentUpon>Ab Testing.Get.feature</DependentUpon>
+    <Compile Update="Features\GetPetByPetId.Definition.cs">
+      <DependentUpon>Pet.Get.feature</DependentUpon>
     </Compile>
-    <Compile Update="Features\GetAggregatedInfoUserSettings.Definition.cs">
-      <DependentUpon>Aggregated Info User Settings.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAppropriateness.Definition.cs">
-      <DependentUpon>Appropriateness.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAsicSuitabilityTest.Definition.cs">
-      <DependentUpon>ASIC Suitability Test Should Pass.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetCheckTnc.Definition.cs">
-      <DependentUpon>Check Tnc.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetComplianceRequirements.Definition.cs">
-      <DependentUpon>Compliance Requirements.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetContactInfo.Definition.cs">
-      <DependentUpon>Contact Info.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetCustomerRestriction.Definition.cs">
-      <DependentUpon>Customer Restriction.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetDepositInfobyGcid.Definition.cs">
-      <DependentUpon>Deposit Info by Gcid.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetElectiveProfessionalQuestionnaire.Definition.cs">
-      <DependentUpon>Elective Professional Questionnaire Start.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetIsAbleToCopy.Definition.cs">
-      <DependentUpon>Is Able To Copy.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetPotentialLeverageFlowForRealStocks.Definition.cs">
-      <DependentUpon>Potential Leverage Flow for Real Stocks.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetW8ben.Definition.cs">
-      <DependentUpon>W8ben.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\PatchW8benState.Definition.cs">
-      <DependentUpon>W8ben State.Patch.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetVerificationStatusAndDocuments.Definition.cs">
-      <DependentUpon>Verification Status And Documents.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetUserTaxes.Definition.cs">
-      <DependentUpon>User Taxes.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetKycAggregatedInfo.Definition.cs">
-      <DependentUpon>Kyc Aggregated Info.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetRequiredEvFields.Definition.cs">
-      <DependentUpon>Required Ev Fields.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetTradeRestriction.Definition.cs">
-      <DependentUpon>Trade Restriction.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetUserResources.Definition.cs">
-      <DependentUpon>User Resources.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetStateNavigation.Definition.cs">
-      <DependentUpon>State Navigation.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetUserTnc.Definition.cs">
-      <DependentUpon>User Tnc.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetVerificationCompletionPercentage.Definition.cs">
-      <DependentUpon>Verification Completion Percentage.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetPotentialLeverageFlow.Definition.cs">
-      <DependentUpon>Potential Leverage Flow.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetTncDocuments.Definition.cs">
-      <DependentUpon>Tnc Documents.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetUserRiskInfo.Definition.cs">
-      <DependentUpon>User Risk Info.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\PutUserSignature.Definition.cs">
-      <DependentUpon>User Signature.Put.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\PostElectiveProfessionalQuestionnaireEnd.Definition.cs">
-      <DependentUpon>Elective Professional Questionnaire End.Post.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAccountStatementUser.Definition.cs">
-      <DependentUpon>Account Statement User.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetRegulationSettings.Definition.cs">
-      <DependentUpon>Regulation Settings.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetStatementSummaryFromAccountStattement.Definition.cs">
-      <DependentUpon>Statement Summary.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAccountStatementDocuments.Definition.cs">
-      <DependentUpon>Account Statement Documents.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetShouldPassCopySuitability.Definition.cs">
-      <DependentUpon>Should Pass Copy Suitability.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetCountries.Definition.cs">
-      <DependentUpon>Countries.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAccountStatementClosedPositions.Definition.cs">
-      <DependentUpon>Account Statement Closed Positions.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAccountStatementTransactions.Definition.cs">
-      <DependentUpon>Account Statement Transactions.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAccountStatementTaxSummary.Definition.cs">
-      <DependentUpon>Account Statement Tax Summary.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetExtendedUserFieldsMetadata.Definition.cs">
-      <DependentUpon>Extended User Fields Metadata.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetKycFlow.Definition.cs">
-      <DependentUpon>Kyc Flow.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetAggregatedInfo.Definition.cs">
-      <DependentUpon>Aggregated Info.Get.feature</DependentUpon>
-    </Compile>
-    <Compile Update="Features\GetComplianceUserDocuments.Definition.cs">
-      <DependentUpon>Compliance User Documents.Get.feature</DependentUpon>
+    <Compile Update="Features\PostPet.Definition.cs">
+      <DependentUpon>Pet.Post.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Features\GetJsonPlaceholderByJsonPlaceholderId.Definition.cs">
-      <DependentUpon>JsonPlaceholder.Get.feature</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Features\PostJsonPlaceholder.Definition.cs">
-      <DependentUpon>JsonPlaceholder.Post.feature</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Features\JsonPlaceholderPutWithBody.Definition.cs">
-      <DependentUpon>JsonPlaceholder.Put.feature</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Features\JsonPlaceholderPatchWithBody.Definition.cs">
-      <DependentUpon>JsonPlaceholder.Patch.feature</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Features\DeleteJsonPlaceholderById.Definition.cs">
-      <DependentUpon>JsonPlaceholder.Delete.feature</DependentUpon>
-    </Compile>
-  </ItemGroup>
 
 </Project>

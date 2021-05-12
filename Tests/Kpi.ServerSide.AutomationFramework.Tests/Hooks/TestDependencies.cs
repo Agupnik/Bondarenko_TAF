@@ -8,7 +8,7 @@ using TechTalk.SpecFlow;
 
 namespace Kpi.ServerSide.AutomationFramework.Tests.Hooks
 {
-    public static class TestDependencies
+    public class TestDependencies
     {
         [ScenarioDependencies]
         public static ContainerBuilder CreateContainerBuilder()
@@ -26,7 +26,7 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Hooks
         private static IConfigurationBuilder GetConfiguration()
         {
             var ciEnv = Environment.GetEnvironmentVariable("testrun.environment");
-            var val = string.IsNullOrEmpty(ciEnv) ? "stg" : ciEnv;
+            var val = string.IsNullOrEmpty(ciEnv) ? "int" : ciEnv;
 
             return new ConfigurationBuilder()
                     .AddJsonFile($"env.{val}.json", optional: true, reloadOnChange: true);

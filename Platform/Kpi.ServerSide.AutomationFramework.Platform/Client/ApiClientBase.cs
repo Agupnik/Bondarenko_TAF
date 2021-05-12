@@ -46,29 +46,31 @@ namespace Kpi.ServerSide.AutomationFramework.Platform.Client
             return response.GetModel<T1>();
         }
 
-        protected async Task<IRestResponse> ExecuteGetAsync(string uri, string accessToken)
+        protected async Task<IRestResponse> ExecutePostResponseAsync(string uri, string accessToken)
+        {
+            var request = new RestRequest(uri, Method.POST)
+                .AddAuthorizationHeader(accessToken);
+            return await _client.ExecuteAsync(request);
+        }
+
+        protected async Task<IRestResponse> ExecuteGetAsync(string uri, string accessToken = null)
         {
             var request = new RestRequest(uri, Method.GET)
                 .AddAuthorizationHeader(accessToken);
             return await _client.ExecuteAsync(request);
         }
-
-        protected async Task<IRestResponse> ExecuteGetAsync(string uri)
+        
+        protected async Task<IRestResponse> ExecutePostAsync(string uri, string accessToken)
         {
-            var request = new RestRequest(uri, Method.GET);
+            var request = new RestRequest(uri, Method.POST)
+                .AddAuthorizationHeader(accessToken);
             return await _client.ExecuteAsync(request);
         }
 
-        protected async Task<IRestResponse> ExecutePatchAsync<T>(string uri, T body, string accessToken = null)
+        protected async Task<IRestResponse> ExecutePatchAsync<T>(string uri, T body, string accessToken)
             where T : class
         {
             return await _client.ExecuteAsync(CreateRequest(uri, Method.PATCH, body, accessToken));
-        }
-
-        protected async Task<IRestResponse> ExecuteDeleteAsync(string uri)
-        {
-            var request = new RestRequest(uri, Method.DELETE);
-            return await _client.ExecuteAsync(request);
         }
 
         protected async Task<T> ExecutePostAsync<T>(string uri, string accessToken)
@@ -78,14 +80,7 @@ namespace Kpi.ServerSide.AutomationFramework.Platform.Client
             return response.GetModel<T>();
         }
 
-        protected async Task<IRestResponse> ExecutePostAsync(string uri, string accessToken)
-        {
-            var request = new RestRequest(uri, Method.POST)
-                .AddAuthorizationHeader(accessToken);
-            return await _client.ExecuteAsync(request);
-        }
-
-        protected async Task<IRestResponse> ExecutePutAsync<T2>(string uri, T2 body, string accessToken = null)
+        protected async Task<IRestResponse> ExecutePutAsync<T2>(string uri, T2 body, string accessToken)
             where T2 : class
         {
             var request = CreateRequest(uri, Method.PUT, body, accessToken);

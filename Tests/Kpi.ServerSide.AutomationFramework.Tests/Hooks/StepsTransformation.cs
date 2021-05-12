@@ -8,7 +8,7 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Hooks
     {
         [StepArgumentTransformation]
         public string[] TransformToListOfString(string commaSeparatedList) =>
-            commaSeparatedList.Split(";")
-                .Select(e => e.Trim()).ToArray();
+           commaSeparatedList.Split(";")
+               .Select(e => e.Trim()).ToArray();
     }
 }
