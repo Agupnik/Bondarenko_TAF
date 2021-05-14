@@ -1,9 +1,9 @@
 ﻿using Autofac;
-using Kpi.ServerSide.AutomationFramework.Model.Domain.Pet;
+using Kpi.ServerSide.AutomationFramework.Model.Domain.User;
 using Kpi.ServerSide.AutomationFramework.Model.Platform.Communication;
+using Kpi.ServerSide.AutomationFramework.PetStore.User;
 using Kpi.ServerSide.AutomationFramework.Platform.Communication;
 using Kpi.ServerSide.AutomationFramework.Platform.Configuration.Environment;
-using Kpi.ServerSide.AutomationFramework.YourDomain.Pet;
 using Microsoft.Extensions.Configuration;
 using RestSharp;
 using Serilog;
@@ -39,10 +39,10 @@ namespace Kpi.ServerSide.AutomationFramework.Bootstrap
             Builder.RegisterType<RestClient>().As<IRestClient>().InstancePerDependency();
 
             // Api Clients
-            Builder.RegisterType<PetApiClient>().As<IPetApiClient>().SingleInstance();
+            Builder.RegisterType<UserApiClient>().As<IUserApiClient>().SingleInstance();
 
             // Logic
-            Builder.RegisterType<PetContext>().As<IPetContext>().SingleInstance();
+            Builder.RegisterType<UserContext>().As<IUserContext>().SingleInstance();
         }
     }
 }

@@ -82,11 +82,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\GetPetByPetId.Definition.cs">
-      <DependentUpon>Pet.Get.feature</DependentUpon>
+    <Compile Update="Features\GetUser.Definition.cs">
+      <DependentUpon>User.Get.feature</DependentUpon>
     </Compile>
-    <Compile Update="Features\PostPet.Definition.cs">
-      <DependentUpon>Pet.Post.feature</DependentUpon>
+    <Compile Update="Features\PostUser.Definition.cs">
+      <DependentUpon>User.Post.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\DeleteUser.Definition.cs">
+      <DependentUpon>User.Delete.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\PutUser.Definition.cs">
+      <DependentUpon>User.Put.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
