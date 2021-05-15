@@ -38,7 +38,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Model\Kpi.ServerSide.AutomationFramework.Model.Domain\Kpi.ServerSide.AutomationFramework.Model.Domain.csproj" />
-    <ProjectReference Include="..\..\Platform\Kpi.ServerSide.AutomationFramework.Platform\Kpi.ServerSide.AutomationFramework.Platform.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Kpi.ServerSide.AutomationFramework.Model.Domain;
@@ -13,14 +11,16 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
     [Binding, Scope(Feature = "Get User by name")]
     public class GetUserDefinition
     {
-        private readonly IUserContext _userContext;
+        private readonly IPetStoreContext _userContext;
+        private readonly UserRequest _defaultUser;
         private UserResponse _userResponse;
         private ResponseMessage _responseMessage;
 
         public GetUserDefinition(
-            IUserContext userContext)
+            IPetStoreContext userContext)
         {
             _userContext = userContext;
+            _defaultUser = UserStorage.UserRequests["Default"];
         }
 
         [Given(@"I have free API with swagger")]
@@ -32,27 +32,28 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
         public async Task WhenICreateUserByPostRequest()
         {
             await _userContext.CreateUserResponseAsync(
-                UserStorage.UserRequests["Default"]);
+                _defaultUser);
         }
 
         [When(@"I receive get user by name response")]
         public async Task WhenIReceiveGetUserByNameResponse()
         {
             _userResponse = await _userContext.GetUserByNameAsync(
-                UserStorage.UserRequests["Default"].Username);
+                _defaultUser.Username);
         }
 
         [Then(@"I see returned user details which are equal with created")]
         public void ThenISeeReturnedUserDetailsWhichAreEqualWithCreated()
         {
             _userResponse.Username.Should().Be(
-                UserStorage.UserRequests["Default"].Username);
+                _defaultUser.Username);
         }
 
         [When(@"I receive get user by name response with invalid name")]
         public async Task WhenIReceiveGetUserByNameResponseWithInvalidName()
         {
-            _responseMessage = await _userContext.GetUserByNameResponseAsync(Guid.NewGuid().ToString());
+            _responseMessage = await _userContext.GetUserByNameResponseAsync(
+                Guid.NewGuid().ToString());
         }
 
         [Then(@"I see (.*) response status code")]

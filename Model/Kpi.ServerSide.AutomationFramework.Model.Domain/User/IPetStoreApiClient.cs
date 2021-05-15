@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace Kpi.ServerSide.AutomationFramework.Model.Domain.User
 {
-    public interface IUserApiClient
+    public interface IPetStoreApiClient
     {
         Task<UserResponse> GetUserByNameAsync(
             string userName);
@@ -21,6 +17,7 @@ namespace Kpi.ServerSide.AutomationFramework.Model.Domain.User
             string userName);
 
         Task<ResponseMessage> UpdateUserResponseAsync(
-            string userName, UserRequest userRequest);
+            string userName, 
+            UserRequest userRequest);
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Kpi.ServerSide.AutomationFramework.Model.Domain;
@@ -13,13 +11,15 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
     [Binding, Scope(Feature = "Delete User by name")]
     public class DeleteUserDefinition
     {
-        private readonly IUserContext _userContext;
+        private readonly UserRequest _defaultUser;
+        private readonly IPetStoreContext _petStoreContext;
         private ResponseMessage _responseMessage;
 
         public DeleteUserDefinition(
-            IUserContext userContext)
+            IPetStoreContext userContext)
         {
-            _userContext = userContext;
+            _petStoreContext = userContext;
+            _defaultUser = UserStorage.UserRequests["Default"];
         }
 
         [Given(@"I have free API with swagger")]
@@ -30,15 +30,15 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
         [When(@"I create user by post request")]
         public async Task WhenICreateUserByPostRequest()
         {
-            await _userContext.CreateUserResponseAsync(
-                UserStorage.UserRequests["Default"]);
+            await _petStoreContext.CreateUserResponseAsync(
+                _defaultUser);
         }
 
         [When(@"I send delete request with created user name")]
         public async Task WhenISendDeleteRequestWithCreatedUserName()
         {
-            _responseMessage = await _userContext.DeleteUserResponseAsync(
-                UserStorage.UserRequests["Default"].Username);
+            _responseMessage = await _petStoreContext.DeleteUserResponseAsync(
+                _defaultUser.Username);
         }
 
         [Then(@"I see (.*) status code")]
@@ -51,7 +51,7 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
         [When(@"I send delete request with invalid user name")]
         public async Task WhenISendDeleteRequestWithInvalidUserName()
         {
-            _responseMessage = await _userContext.DeleteUserResponseAsync(
+            _responseMessage = await _petStoreContext.DeleteUserResponseAsync(
                 Guid.NewGuid().ToString());
         }
     }

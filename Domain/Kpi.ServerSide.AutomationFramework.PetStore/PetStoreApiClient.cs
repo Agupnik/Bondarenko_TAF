@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿using System.Reflection;
 using System.Threading.Tasks;
 using Kpi.ServerSide.AutomationFramework.Model.Domain;
 using Kpi.ServerSide.AutomationFramework.Model.Domain.User;
@@ -11,11 +8,11 @@ using Kpi.ServerSide.AutomationFramework.Platform.Communication.Http;
 using Kpi.ServerSide.AutomationFramework.Platform.Configuration.Environment;
 using Serilog;
 
-namespace Kpi.ServerSide.AutomationFramework.PetStore.User
+namespace Kpi.ServerSide.AutomationFramework.PetStore
 {
-    public class UserApiClient : ApiClientBase, IUserApiClient
+    public class PetStoreApiClient : ApiClientBase, IPetStoreApiClient
     {
-        public UserApiClient(
+        public PetStoreApiClient(
             IClient client,
             ILogger logger,
             IEnvironmentConfiguration environmentConfiguration)

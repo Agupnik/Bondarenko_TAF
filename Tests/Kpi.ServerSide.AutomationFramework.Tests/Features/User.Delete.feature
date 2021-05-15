@@ -10,7 +10,7 @@ Scenario: 1. Validate Delete User by name with valid data
 	And I send delete request with created user name
 	Then I see OK status code
 
-Scenario Outline: 2. Validate Delete User by name with invalid data
+Scenario: 2. Validate Delete User by name with invalid data
 	Given I have free API with swagger
 	When I send delete request with invalid user name
 	Then I see NotFound status code

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using FluentAssertions;
-using Kpi.ServerSide.AutomationFramework.Model.Domain;
 using Kpi.ServerSide.AutomationFramework.Model.Domain.User;
 using Kpi.ServerSide.AutomationFramework.TestsData.Storages.User;
 using TechTalk.SpecFlow;
@@ -13,12 +9,14 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
     [Binding, Scope(Feature = "User Registration")]
     public class PostUserDefinition
     {
-        private readonly IUserContext _userContext;
+        private readonly UserRequest _defaultUser;
+        private readonly IPetStoreContext _userContext;
 
         public PostUserDefinition(
-            IUserContext userContext)
+            IPetStoreContext userContext)
         {
             _userContext = userContext;
+            _defaultUser = UserStorage.UserRequests["Default"];
         }
 
         [Given(@"I have free API with swagger")]
@@ -29,16 +27,16 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
         [When(@"I send the user creation request with provided model")]
         public async Task WhenISendTheUserCreationRequestWithProvidedModel()
         {
-            await _userContext.CreateUserResponseAsync(UserStorage.UserRequests["Default"]);
+            await _userContext.CreateUserResponseAsync(_defaultUser);
         }
 
         [Then(@"I see created user in the get response")]
         public async Task ThenISeeCreatedUserInTheGetResponse()
         {
             var createdUser = await _userContext.GetUserByNameAsync(
-                UserStorage.UserRequests["Default"].Username);
+                _defaultUser.Username);
             createdUser.Username.Should().Be(
-                UserStorage.UserRequests["Default"].Username);
+                _defaultUser.Username);
         }
     }
 }
