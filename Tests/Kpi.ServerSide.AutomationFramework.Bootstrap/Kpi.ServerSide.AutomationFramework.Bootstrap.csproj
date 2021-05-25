@@ -42,7 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\Kpi.ServerSide.AutomationFramework.PetStore\Kpi.ServerSide.AutomationFramework.PetStore.csproj" />
+    <ProjectReference Include="..\..\Domain\Kpi.ServerSide.AutomationFramework.User\Kpi.ServerSide.AutomationFramework.User.csproj" />
     <ProjectReference Include="..\..\Platform\Kpi.ServerSide.AutomationFramework.Platform\Kpi.ServerSide.AutomationFramework.Platform.csproj" />
   </ItemGroup>
 

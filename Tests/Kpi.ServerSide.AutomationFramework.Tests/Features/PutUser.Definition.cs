@@ -9,12 +9,12 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
     [Binding, Scope(Feature = "Update User by name")]
     public class PutUserDefinition
     {
-        private readonly IPetStoreContext _userContext;
+        private readonly IUserContext _userContext;
         private readonly UserRequest _defaultUser;
         private readonly UserRequest _newUserInfo;
 
         public PutUserDefinition(
-            IPetStoreContext userContext)
+            IUserContext userContext)
         {
             _userContext = userContext;
             _defaultUser = UserStorage.UserRequests["Default"];

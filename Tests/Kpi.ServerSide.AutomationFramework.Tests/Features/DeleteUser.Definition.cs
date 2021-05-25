@@ -12,13 +12,13 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
     public class DeleteUserDefinition
     {
         private readonly UserRequest _defaultUser;
-        private readonly IPetStoreContext _petStoreContext;
+        private readonly IUserContext _userContext;
         private ResponseMessage _responseMessage;
 
         public DeleteUserDefinition(
-            IPetStoreContext userContext)
+            IUserContext userContext)
         {
-            _petStoreContext = userContext;
+            _userContext = userContext;
             _defaultUser = UserStorage.UserRequests["Default"];
         }
 
@@ -30,14 +30,14 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
         [When(@"I create user by post request")]
         public async Task WhenICreateUserByPostRequest()
         {
-            await _petStoreContext.CreateUserResponseAsync(
+            await _userContext.CreateUserResponseAsync(
                 _defaultUser);
         }
 
         [When(@"I send delete request with created user name")]
         public async Task WhenISendDeleteRequestWithCreatedUserName()
         {
-            _responseMessage = await _petStoreContext.DeleteUserResponseAsync(
+            _responseMessage = await _userContext.DeleteUserResponseAsync(
                 _defaultUser.Username);
         }
 
@@ -51,7 +51,7 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
         [When(@"I send delete request with invalid user name")]
         public async Task WhenISendDeleteRequestWithInvalidUserName()
         {
-            _responseMessage = await _petStoreContext.DeleteUserResponseAsync(
+            _responseMessage = await _userContext.DeleteUserResponseAsync(
                 Guid.NewGuid().ToString());
         }
     }

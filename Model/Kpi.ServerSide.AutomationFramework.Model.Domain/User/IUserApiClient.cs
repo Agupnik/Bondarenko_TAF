@@ -2,7 +2,7 @@
 
 namespace Kpi.ServerSide.AutomationFramework.Model.Domain.User
 {
-    public interface IPetStoreContext
+    public interface IUserApiClient
     {
         Task<UserResponse> GetUserByNameAsync(
             string userName);
@@ -17,7 +17,7 @@ namespace Kpi.ServerSide.AutomationFramework.Model.Domain.User
             string userName);
 
         Task<ResponseMessage> UpdateUserResponseAsync(
-            string userName,
+            string userName, 
             UserRequest userRequest);
     }
 }

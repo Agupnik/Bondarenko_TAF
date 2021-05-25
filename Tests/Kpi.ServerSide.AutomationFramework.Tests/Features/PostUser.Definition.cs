@@ -10,10 +10,10 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
     public class PostUserDefinition
     {
         private readonly UserRequest _defaultUser;
-        private readonly IPetStoreContext _userContext;
+        private readonly IUserContext _userContext;
 
         public PostUserDefinition(
-            IPetStoreContext userContext)
+            IUserContext userContext)
         {
             _userContext = userContext;
             _defaultUser = UserStorage.UserRequests["Default"];

@@ -11,13 +11,13 @@ namespace Kpi.ServerSide.AutomationFramework.Tests.Features
     [Binding, Scope(Feature = "Get User by name")]
     public class GetUserDefinition
     {
-        private readonly IPetStoreContext _userContext;
+        private readonly IUserContext _userContext;
         private readonly UserRequest _defaultUser;
         private UserResponse _userResponse;
         private ResponseMessage _responseMessage;
 
         public GetUserDefinition(
-            IPetStoreContext userContext)
+            IUserContext userContext)
         {
             _userContext = userContext;
             _defaultUser = UserStorage.UserRequests["Default"];
