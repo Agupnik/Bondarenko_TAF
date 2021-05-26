@@ -6,43 +6,43 @@ namespace Kpi.ServerSide.AutomationFramework.User
 {
     public class UserContext : IUserContext
     {
-        private readonly IUserApiClient _petStoreApiClient;
+        private readonly IUserApiClient _userApiClient;
 
         public UserContext(
-            IUserApiClient petStoreApiClient)
+            IUserApiClient userApiClient)
         {
-            _petStoreApiClient = petStoreApiClient;
+            _userApiClient = userApiClient;
         }
 
         public async Task<ResponseMessage> CreateUserResponseAsync(
             UserRequest userRequest)
         {
-            return await _petStoreApiClient.CreateUserResponseAsync(userRequest);
+            return await _userApiClient.CreateUserResponseAsync(userRequest);
         }
 
         public async Task<ResponseMessage> DeleteUserResponseAsync(
             string userName)
         {
-            return await _petStoreApiClient.DeleteUserResponseAsync(userName);
+            return await _userApiClient.DeleteUserResponseAsync(userName);
         }
 
         public async Task<UserResponse> GetUserByNameAsync(
             string userName)
         {
-            return await _petStoreApiClient.GetUserByNameAsync(userName);
+            return await _userApiClient.GetUserByNameAsync(userName);
         }
 
         public async Task<ResponseMessage> GetUserByNameResponseAsync(
             string userName)
         {
-            return await _petStoreApiClient.GetUserByNameResponseAsync(userName);
+            return await _userApiClient.GetUserByNameResponseAsync(userName);
         }
 
         public async Task<ResponseMessage> UpdateUserResponseAsync(
             string userName, 
             UserRequest userRequest)
         {
-            return await _petStoreApiClient.UpdateUserResponseAsync(userName, userRequest);
+            return await _userApiClient.UpdateUserResponseAsync(userName, userRequest);
         }
     }
 }
